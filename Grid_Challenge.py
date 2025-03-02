@@ -1,5 +1,10 @@
 def gridChallenge(grid):
+    if not grid:
+        return 'NO'
+    k = len(grid[0])
     for i in range(len(grid)):
+        if len(grid[i]) != k:
+            return 'NO'
         grid[i] = sorted(grid[i])
     for i in range(len(grid[0])):
         for j in range(1, len(grid)):
@@ -12,3 +17,5 @@ def gridChallenge(grid):
 # print(gridChallenge(['uxf', 'vof', 'hmp'])) # NO
 # print(gridChallenge(['abc', 'def', 'ghi'])) # YES
 # print(gridChallenge(['mpxz', 'abcd', 'wlmn'])) # NO
+print(gridChallenge(["zxc","aaa"])) # NO"
+#c 
